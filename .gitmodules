@@ -1,0 +1,6 @@
+[submodule "klippy"]
+	path = klippy
+	url = https://github.com/threadbatteryslave6996ohio-coder/clippy.git
+[submodule "eyes-and-ears"]
+	path = eyes-and-ears
+	url = https://github.com/my-Jarvis-assistant/jarvis.git

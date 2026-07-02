@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>dev.clippy</groupId>
+    <artifactId>jarvis-klippy</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <profiles>
+        <profile>
+            <id>all</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <modules>
+                <module>klippy</module>
+                <module>eyes-and-ears/bucket</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>klippy</id>
+            <modules>
+                <module>klippy</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>eyes-and-ears</id>
+            <modules>
+                <module>eyes-and-ears</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>clients</id>
+            <modules>
+                <module>auth/api</module>
+                <module>auth/client</module>
+                <module>klippy/utils</module>
+                <module>klippy/clients/client-envs</module>
+                <module>klippy/clients/file-locker</module>
+                <module>klippy/clients/client-core</module>
+                <module>klippy/clients/mac</module>
+                <module>klippy/clients/linux</module>
+                <module>klippy/clients/offline-sync</module>
+                <module>klippy/clients/dummy</module>
+            </modules>
+        </profile>
+
+        <profile>
+            <id>servers</id>
+            <modules>
+                <module>auth/api</module>
+                <module>auth/client</module>
+                <module>klippy/utils</module>
+                <module>klippy/server-bootstrap</module>
+                <module>klippy/server</module>
+                <module>auth/server</module>
+                <module>klippy/combined-server</module>
+                <module>eyes-and-ears/bucket/proxy</module>
+                <module>eyes-and-ears/bucket/alerting</module>
+                <module>eyes-and-ears/bucket/detection</module>
+                <module>eyes-and-ears/bucket/streaming</module>
+            </modules>
+        </profile>
+    </profiles>
+</project>
