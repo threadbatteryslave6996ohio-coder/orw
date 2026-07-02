@@ -33,7 +33,7 @@ To build a runnable jar instead:
 ```bash
 cd ~/Desktop/clippy
 mvn -pl auth/server -am package
-java -jar auth/server/target/clippy-auth-server-0.1.0-SNAPSHOT-exec.jar
+java -jar auth/server/target/auth-server-0.1.0-SNAPSHOT-exec.jar
 ```
 
 ## Configuration
@@ -49,7 +49,7 @@ All values are required. These values provide a local configuration.
 | `AUTH_DATASOURCE_URL` | `jdbc:postgresql://localhost:5433/auth` | PostgreSQL JDBC URL. |
 | `AUTH_DATASOURCE_USERNAME` | `auth` | Database username. |
 | `AUTH_DATASOURCE_PASSWORD` | `auth` | Database password. |
-| `AUTH_LOGGING_FILE_NAME` | `logs/clippy-auth-server.log` | File path for server logs. |
+| `AUTH_LOGGING_FILE_NAME` | `logs/auth-server.log` | File path for server logs. |
 | `AUTH_JPA_HIBERNATE_DDL_AUTO` | `update` | Hibernate schema-management mode. |
 | `AUTH_JPA_JDBC_TIME_ZONE` | `UTC` | Hibernate JDBC timezone. |
 
@@ -63,7 +63,7 @@ logged.
 If you run the `CustomLogger` directly elsewhere, you can still redirect it with the JVM system property `custom.logger.dir`, for example:
 
 ```bash
-java -Dcustom.logger.dir=/tmp/clippy-logs -jar auth/server/target/clippy-auth-server-0.1.0-SNAPSHOT-exec.jar
+java -Dcustom.logger.dir=/tmp/clippy-logs -jar auth/server/target/auth-server-0.1.0-SNAPSHOT-exec.jar
 ```
 
 For Azure, point `AUTH_DATASOURCE_URL` at the `auth` database on the deployed PostgreSQL server.

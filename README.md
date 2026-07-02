@@ -41,15 +41,14 @@ the application by artifact ID and let Maven include only its dependencies:
 ```bash
 mvn -Pclients -pl :clippy-linux-client -am package
 mvn -Pservers -pl :clippy-server -am package
-mvn -Pservers -pl :clippy-auth-server -am package
+mvn -pl :auth-server -am package
 mvn -Pservers -pl :bucket-proxy -am package
 ```
 
 The focused subtree reactors are also available:
 
 ```bash
-mvn -f klippy/pom.xml package
-mvn -f eyes-and-ears/pom.xml package
+mvn package
 ```
 
 The Android project and the `eyes-and-ears/clients` shell clients keep their
@@ -59,7 +58,7 @@ own standalone build and deployment instructions.
 
 Executable modules remain thin deployment boundaries. Reusable Klippy client
 behavior lives in `klippy/clients/client-core`, configuration and auth session
-handling live in `klippy/clients/client-envs`, and authentication contracts live
+handling live in its `dev.clippy.clients.core.env` package, and authentication contracts live
 in `auth/api` and `auth/client`. A future combined desktop client should depend
 on those libraries and provide its own launcher rather than invoking an existing
 standalone launcher.

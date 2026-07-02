@@ -4,7 +4,7 @@ import dev.clippy.auth.api.CheckTokenRequest;
 import dev.clippy.auth.api.CheckTokenResponse;
 import dev.clippy.auth.api.LoginRequest;
 import dev.clippy.auth.api.LoginResponse;
-import dev.clippy.utils.logger.CustomLogger;
+import dev.clippy.utils.CustomLogger;
 import jakarta.validation.Valid;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;

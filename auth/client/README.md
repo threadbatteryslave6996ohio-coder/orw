@@ -14,7 +14,7 @@ boolean valid = authClient.isTokenValidForClient("dummy", login.token());
 ```
 
 The shared request and response records are provided by the transitive
-`clippy-auth-api` dependency.
+`auth-api` dependency.
 
 ## Build
 
@@ -24,7 +24,7 @@ mvn -pl auth/client package
 
 ## Install For Local Consumers
 
-If another module in this repo depends on `dev.clippy:clippy-auth-client:0.1.0-SNAPSHOT` and you are building that module outside the auth reactor, install the auth client into your local Maven repository first:
+If another module in this repo depends on `dev.clippy:auth-client:0.1.0-SNAPSHOT` and you are building that module outside the auth reactor, install the auth client into your local Maven repository first:
 
 ```bash
 mvn -pl auth/client install

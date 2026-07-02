@@ -2,7 +2,7 @@ package dev.clippy.auth;
 
 import dev.clippy.bootstrap.SpringServerBootstrap;
 import dev.clippy.utils.envmanager.Env;
-import dev.clippy.utils.logger.CustomLogger;
+import dev.clippy.utils.CustomLogger;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 

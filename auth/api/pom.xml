@@ -5,12 +5,12 @@
 
     <parent>
         <groupId>dev.clippy</groupId>
-        <artifactId>clippy-auth</artifactId>
+        <artifactId>auth</artifactId>
         <version>0.1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>clippy-auth-api</artifactId>
+    <artifactId>auth-api</artifactId>
 
     <dependencies>
         <dependency>

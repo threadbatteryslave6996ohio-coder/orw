@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.clippy</groupId>
-    <artifactId>clippy-auth</artifactId>
+    <artifactId>auth</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -34,7 +34,7 @@
             </dependency>
             <dependency>
                 <groupId>dev.clippy</groupId>
-                <artifactId>clippy-auth-api</artifactId>
+                <artifactId>auth-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
